@@ -41,9 +41,9 @@ var email = {
 
     mailer.sendMail(email, function(err, res) {
         if (err) {
-            console.log(err)
+            console.log("send error", err)
         }
-        console.log(res);
+        //console.log(res);
     });
     console.log("sending email!!");
 

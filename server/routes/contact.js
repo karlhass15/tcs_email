@@ -15,7 +15,7 @@ router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({expanded: true}));
 
 router.post('/', function(req,res){
-    console.log(req);
+    //console.log(req);
     var addedContact = new Person({
         "name" : req.body.name,
         "email" : req.body.email,
@@ -27,7 +27,7 @@ router.post('/', function(req,res){
         //res.send(data);
     });
 
-    //mailer.sendMail(req, res);
+    mailer.sendMail(req, res);
 
 });
 module.exports = router;
