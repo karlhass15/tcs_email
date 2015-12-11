@@ -1,0 +1,26 @@
+{
+  "name": "email",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-uglify": "^0.11.0",
+    "jquery": "^2.1.4",
+    "mongoose": "^4.3.0",
+    "node": "0.0.0",
+    "nodemailer": "^1.10.0",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "path": "^0.12.7",
+    "xoauth2": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
