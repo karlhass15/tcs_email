@@ -1,17 +1,14 @@
 'use strict';
-
 var nodemailer = require('nodemailer');
 var sgTransport = require('nodemailer-sendgrid-transport');
 
 var options = {
     auth: {
-        //sendgrid password
-        api_user: 'sendgrid_user',
-        api_key: 'sendgrid_password'
+        // sendgrid_password
+        api_key: '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'
     }
 };
 var mailer = nodemailer.createTransport(sgTransport(options));
-
 
 exports.renderIndex = function(req,res) {
     res.render('server/views/index', {
@@ -31,13 +28,10 @@ exports.renderNotFound = function(req, res) {
     });
 };
 //send an email when the contact form is submitted
-// direct transport from nodemailer website best for using locally??
 exports.sendMail = function(req, res) {
-    console.log("sending email!!");
     var data = req.body;
 
 
-    //maybe not data.email??????????
 var email = {
     to: ['karl@reclaimedartcraftsman.com'],
     from: data.email,
@@ -51,5 +45,6 @@ var email = {
         }
         console.log(res);
     });
+    console.log("sending email!!");
 
 };

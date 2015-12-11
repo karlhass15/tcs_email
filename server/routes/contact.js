@@ -3,6 +3,7 @@ var router = express.Router();
 var path = require('path');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var mailer = require('../models/core.server.model');
 
 var Schema = mongoose.Schema;
 
@@ -23,12 +24,10 @@ router.post('/', function(req,res){
 
     addedContact.save(function(err, data){
         if(err) console.log(err);
-        res.send(data);
+        //res.send(data);
     });
+
+    //mailer.sendMail(req, res);
+
 });
 module.exports = router;
-
-//mailer.sendMail(req, res);
-
-
-
